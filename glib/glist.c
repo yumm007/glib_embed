@@ -30,9 +30,9 @@
 
 #include "glist.h"
 #include "gslice.h"
-#include "gmessages.h"
+//#include "gmessages.h"
 
-#include "gtestutils.h"
+//#include "gtestutils.h"
 
 /**
  * SECTION:linked_lists_double

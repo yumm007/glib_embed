@@ -2,16 +2,20 @@ cmake_minimum_required(VERSION 3.20)
 
 PROJECT(glib_lite)
 
-INCLUDE_DIRECTORIES(./)
+INCLUDE_DIRECTORIES(./
+    glib/
+    )
 
 ADD_LIBRARY(glib_lite STATIC
-    glib/glibconfig.h
+    glib/glibconfig.h glib/gtypes.h glib/gversionmacros.h
     glib/glist.c glib/glist.h
-    #glib/gmem.c glib/gmem.h
-    #glib/gslice.c glib/gslice.h
+    glib/gslice.c glib/gslice.h
+    glib/gmem.c glib/gmem.h
+    glib/gnode.c glib/gnode.h
+
     #glib/gslist.c glib/gslist.h
     #glib/ghash.c glib/ghash.h
-    #glib/gnode.c glib/gnode.h
+
     #glib/gqueue.c glib/gqueue.h
     #glib/gstring.c glib/gstring.h
     #glib/gstrfuncs.c glib/gstrfuncs.h
