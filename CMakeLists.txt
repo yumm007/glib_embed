@@ -12,8 +12,11 @@ ADD_LIBRARY(glib_lite STATIC
     glib/gslice.c glib/gslice.h
     glib/gmem.c glib/gmem.h
     glib/gnode.c glib/gnode.h
+    glib/gthread.c glib/gthread.h
+    glib/gstrfuncs.c glib/gstrfuncs.h
+    glib/gslist.c glib/gslist.h
+    glib/gatomic.c glib/gatomic.h
 
-    #glib/gslist.c glib/gslist.h
     #glib/ghash.c glib/ghash.h
 
     #glib/gqueue.c glib/gqueue.h

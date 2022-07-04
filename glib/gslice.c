@@ -16,6 +16,11 @@
  */
 /* MT safe */
 
+#include <stdlib.h>
+#include <string.h>
+#include "gtypes.h"
+
+#if 0
 #include "config.h"
 #include "glibconfig.h"
 
@@ -1736,3 +1741,34 @@ g_slice_debug_tree_statistics (void)
    */
 }
 #endif /* G_ENABLE_DEBUG */
+#endif
+
+gpointer
+g_slice_alloc (gsize mem_size) {
+    return malloc(mem_size);
+}
+
+gpointer
+g_slice_alloc0 (gsize mem_size)
+{
+    gpointer mem = g_slice_alloc (mem_size);
+    if (mem)
+        memset (mem, 0, mem_size);
+    return mem;
+}
+
+gpointer
+g_slice_copy (gsize         mem_size,
+              gconstpointer mem_block)
+{
+    gpointer mem = g_slice_alloc (mem_size);
+    if (mem)
+        memcpy (mem, mem_block, mem_size);
+    return mem;
+}
+
+void
+g_slice_free1 (gsize    mem_size,
+               gpointer mem_block) {
+    free(mem_block);
+}
