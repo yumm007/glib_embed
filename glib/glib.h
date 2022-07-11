@@ -29,15 +29,15 @@
 
 #include "config.h"
 
-//#include <glib/galloca.h>
-//#include <glib/garray.h>
+#include <glib/galloca.h>
+#include <glib/garray.h>
 #include <glib/gasyncqueue.h>
 #include <glib/gatomic.h>
 //#include <glib/gbacktrace.h>
 //#include <glib/gbase64.h>
 //#include <glib/gbitlock.h>
 //#include <glib/gbookmarkfile.h>
-//#include <glib/gbytes.h>
+#include <glib/gbytes.h>
 //#include <glib/gcharset.h>
 //#include <glib/gchecksum.h>
 //#include <glib/gconvert.h>
@@ -67,9 +67,9 @@
 //#include <glib/gpattern.h>
 //#include <glib/gpoll.h>
 //#include <glib/gprimes.h>
-//#include <glib/gqsort.h>
+#include <glib/gqsort.h>
 //#include <glib/gquark.h>
-//#include <glib/gqueue.h>
+#include <glib/gqueue.h>
 //#include <glib/grand.h>
 //#include <glib/gregex.h>
 //#include <glib/gscanner.h>
@@ -80,7 +80,7 @@
 //#include <glib/gspawn.h>
 #include <glib/gstrfuncs.h>
 #include <glib/gstring.h>
-//#include <glib/gstringchunk.h>
+#include <glib/gstringchunk.h>
 //#include <glib/gtestutils.h>
 #include <glib/gthread.h>
 //#include <glib/gthreadpool.h>

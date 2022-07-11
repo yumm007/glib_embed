@@ -28,7 +28,7 @@
 
 #include "glib_test.h"
 
-/*
+
 static void
 test_string_chunks (void)
 {
@@ -76,7 +76,7 @@ test_string_chunk_insert (void)
 
   g_string_chunk_free (chunk);
 }
-*/
+
 static void
 test_string_new (void)
 {
@@ -497,8 +497,8 @@ test_string_to_bytes (void)
 
 void glib_string_test(void) {
 
-  //g_test_add_func ("/string/test-string-chunks", test_string_chunks);
-  //g_test_add_func ("/string/test-string-chunk-insert", test_string_chunk_insert);
+  g_test_add_func ("/string/test-string-chunks", test_string_chunks);
+  g_test_add_func ("/string/test-string-chunk-insert", test_string_chunk_insert);
   g_test_add_func ("/string/test-string-new", test_string_new);
   g_test_add_func ("/string/test-string-printf", test_string_printf);
   g_test_add_func ("/string/test-string-assign", test_string_assign);
