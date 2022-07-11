@@ -16,6 +16,8 @@ ADD_LIBRARY(glib_lite STATIC
     glib/gstrfuncs.c glib/gstrfuncs.h
     glib/gslist.c glib/gslist.h
     glib/gatomic.c glib/gatomic.h
+    glib/gprintf.c glib/gprintf.h glib/gprintfint.h
+    glib/gnulib/printf.c glib/gnulib/printf.h
 
     #glib/ghash.c glib/ghash.h
 
@@ -23,7 +25,7 @@ ADD_LIBRARY(glib_lite STATIC
     #glib/gstring.c glib/gstring.h
     #glib/gstrfuncs.c glib/gstrfuncs.h
     #glib/gstringchunk.c glib/gstringchunk.h
-    #glib/gprintf.c glib/gprintf.h
+
     #glib/gasyncqueue.c glib/gasyncqueue.h
     #glib/goption.c glib/goption.h
     #glib/gkeyfile.c glib/gkeyfile.h

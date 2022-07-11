@@ -18,7 +18,7 @@
 #define g_warning(...)
 #define g_return_if_fail(...)
 #define g_return_val_if_fail(...)
-
+#define g_assert(...)
 
 
 #endif //GLIB_LITE_V2_CONFIG_H

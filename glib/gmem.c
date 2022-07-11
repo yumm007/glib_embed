@@ -37,7 +37,7 @@
 #include "gslice.h"
 //#include "gbacktrace.h"
 //#include "gtestutils.h"
-//#include "gthread.h"
+#include "gthread.h"
 //#include "glib_trace.h"
 
 /* notes on macros:

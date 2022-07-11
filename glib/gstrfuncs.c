@@ -52,7 +52,8 @@
 
 #include "gprintf.h"
 #include "gprintfint.h"
-#include "glibintl.h"
+#include "gmem.h"
+//#include "glibintl.h"
 
 
 /**
@@ -1250,6 +1251,7 @@ g_ascii_strtoll (const gchar *nptr,
  * Returns: a UTF-8 string describing the error code. If the error code
  *     is unknown, it returns a string like "unknown error (<code>)".
  */
+#ifndef GLIB_LITE
 const gchar *
 g_strerror (gint errnum)
 {
@@ -1303,6 +1305,7 @@ g_strerror (gint errnum)
   errno = saved_errno;
   return msg;
 }
+#endif
 
 /**
  * g_strsignal:
@@ -1316,6 +1319,7 @@ g_strerror (gint errnum)
  * Returns: a UTF-8 string describing the signal. If the signal is unknown,
  *     it returns "unknown signal (<signum>)".
  */
+#ifndef GLIB_LITE
 const gchar *
 g_strsignal (gint signum)
 {
@@ -1338,6 +1342,7 @@ g_strsignal (gint signum)
 
   return ret;
 }
+#endif
 
 /* Functions g_strlcpy and g_strlcat were originally developed by
  * Todd C. Miller <Todd.Miller@courtesan.com> to simplify writing secure code.
