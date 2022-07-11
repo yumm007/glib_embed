@@ -141,7 +141,7 @@ struct _GOnce
 #  define G_TRYLOCK(name) g_mutex_trylock (&G_LOCK_NAME (name))
 #endif /* !G_DEBUG_LOCKS */
 
-#ifndef GLIB_LITE
+
 GLIB_AVAILABLE_IN_2_32
 GThread *       g_thread_ref                    (GThread        *thread);
 GLIB_AVAILABLE_IN_2_32
@@ -154,7 +154,7 @@ GLIB_AVAILABLE_IN_2_32
 GThread *       g_thread_try_new                (const gchar    *name,
                                                  GThreadFunc     func,
                                                  gpointer        data,
-                                                 GError        **error);
+                                                 void        **error);
 GLIB_AVAILABLE_IN_ALL
 GThread *       g_thread_self                   (void);
 GLIB_AVAILABLE_IN_ALL
@@ -163,7 +163,7 @@ GLIB_AVAILABLE_IN_ALL
 gpointer        g_thread_join                   (GThread        *thread);
 GLIB_AVAILABLE_IN_ALL
 void            g_thread_yield                  (void);
-#endif
+
 
 GLIB_AVAILABLE_IN_2_32
 void            g_mutex_init                    (GMutex         *mutex);

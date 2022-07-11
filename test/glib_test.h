@@ -16,7 +16,7 @@
 #define g_assert_cmpmem(x, l1, y, l2) assert(l1 == l2 && memcmp(x, y, l1) == 0)
 
 #define g_assert_cmpuint g_assert_cmpint
-#define g_assert_not_reached(...) *(char *)0 = 1
+#define g_assert_not_reached(...) *(char *)1 = 1
 
 #define g_strcmp0 strcmp
 

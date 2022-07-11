@@ -180,6 +180,10 @@ void
 g_list_free (GList *list)
 {
   //g_slice_free_chain(GList, list, next);
+  if (list == NULL) {
+      return;
+  }
+
   do {
       GList *curr = list;
       list = list->next;

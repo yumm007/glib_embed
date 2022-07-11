@@ -132,7 +132,10 @@ g_slist_alloc (void)
 void
 g_slist_free (GSList *list)
 {
-  //g_slice_free_chain (GSList, list, next);
+    //g_slice_free_chain (GSList, list, next);
+    if (list == NULL) {
+      return;
+    }
     do {
         GSList *curr = list;
         list = list->next;

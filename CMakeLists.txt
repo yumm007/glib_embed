@@ -28,12 +28,14 @@ ADD_LIBRARY(glib_lite STATIC
     glib/garray.c glib/garray.h
     glib/gqsort.c glib/gqsort.h
 
-    #glib/gqueue.c glib/gqueue.h
-    #
+    glib/gqueue.c glib/gqueue.h
+    glib/gasyncqueue.c glib/gasyncqueue.h
+    glib/gtimer.c glib/gtimer.h
+    glib/gthread.c glib/gthread.h glib/gthread-posix.c
+    glib/deprecated/gthread.h glib/deprecated/gthread-deprecated.c
+
     #glib/gstrfuncs.c glib/gstrfuncs.h
     #glib/gstringchunk.c glib/gstringchunk.h
-
-    #glib/gasyncqueue.c glib/gasyncqueue.h
     #glib/goption.c glib/goption.h
     #glib/gkeyfile.c glib/gkeyfile.h
     #glib/gfileutils.c glib/gfileutils.h
@@ -47,5 +49,6 @@ add_executable(glib_test test/test_main.c
     test/glib_test.h
     test/hash.c
     test/string.c
+    test/asyncqueue.c
     )
 target_link_libraries(glib_test glib_lite)

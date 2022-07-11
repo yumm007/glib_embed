@@ -31,7 +31,7 @@
 
 //#include <glib/galloca.h>
 //#include <glib/garray.h>
-//#include <glib/gasyncqueue.h>
+#include <glib/gasyncqueue.h>
 #include <glib/gatomic.h>
 //#include <glib/gbacktrace.h>
 //#include <glib/gbase64.h>
@@ -84,7 +84,7 @@
 //#include <glib/gtestutils.h>
 #include <glib/gthread.h>
 //#include <glib/gthreadpool.h>
-//#include <glib/gtimer.h>
+#include <glib/gtimer.h>
 //#include <glib/gtimezone.h>
 //#include <glib/gtrashstack.h>
 //#include <glib/gtree.h>
