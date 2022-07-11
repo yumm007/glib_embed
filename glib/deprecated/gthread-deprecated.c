@@ -342,7 +342,7 @@ GThread *
 g_thread_create (GThreadFunc   func,
                  gpointer      data,
                  gboolean      joinable,
-                 void      **error)
+                 GError      **error)
 {
   return g_thread_create_full (func, data, 0, joinable, 0, 0, error);
 }
@@ -371,7 +371,7 @@ g_thread_create_full (GThreadFunc       func,
                       gboolean          joinable,
                       gboolean          bound,
                       GThreadPriority   priority,
-                      void          **error)
+                      GError          **error)
 {
   GThread *thread;
 

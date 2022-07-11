@@ -1144,7 +1144,7 @@ g_system_thread_free (GRealThread *thread)
 GRealThread *
 g_system_thread_new (GThreadFunc   thread_func,
                      gulong        stack_size,
-                     void      **error)
+                     GError     **error)
 {
   GThreadPosix *thread;
   pthread_attr_t attr;

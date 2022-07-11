@@ -39,7 +39,7 @@ void            g_system_thread_wait            (GRealThread  *thread);
 
 GRealThread *   g_system_thread_new             (GThreadFunc   func,
                                                  gulong        stack_size,
-                                                 void      **error);
+                                                 GError      **error);
 void            g_system_thread_free            (GRealThread  *thread);
 
 void            g_system_thread_exit            (void);
@@ -52,7 +52,7 @@ GThread *       g_thread_new_internal           (const gchar  *name,
                                                  GThreadFunc   func,
                                                  gpointer      data,
                                                  gsize         stack_size,
-                                                 void      **error);
+                                                 GError      **error);
 
 gpointer        g_thread_proxy                  (gpointer      thread);
 

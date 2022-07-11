@@ -84,7 +84,7 @@ struct _GThreadFunctions
                                    gboolean              bound,
                                    GThreadPriority       priority,
                                    gpointer              thread,
-                                   void              **error);
+                                   GError              **error);
   void      (*thread_yield)       (void);
   void      (*thread_join)        (gpointer              thread);
   void      (*thread_exit)        (void);
@@ -104,7 +104,7 @@ GLIB_DEPRECATED_IN_2_32_FOR(g_thread_new)
 GThread *g_thread_create       (GThreadFunc       func,
                                 gpointer          data,
                                 gboolean          joinable,
-                                void          **error);
+                                GError          **error);
 
 GLIB_DEPRECATED_IN_2_32_FOR(g_thread_new)
 GThread *g_thread_create_full  (GThreadFunc       func,
@@ -113,7 +113,7 @@ GThread *g_thread_create_full  (GThreadFunc       func,
                                 gboolean          joinable,
                                 gboolean          bound,
                                 GThreadPriority   priority,
-                                void          **error);
+                                GError          **error);
 
 GLIB_DEPRECATED_IN_2_32
 void     g_thread_set_priority (GThread          *thread,

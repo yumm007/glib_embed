@@ -15,6 +15,7 @@ ADD_LIBRARY(glib_lite STATIC
     glib/gnode.c glib/gnode.h
     glib/gthread.c glib/gthread.h
     glib/gstrfuncs.c glib/gstrfuncs.h
+    glib/gstringchunk.c glib/gstringchunk.h
     glib/gatomic.c glib/gatomic.h
     glib/gprintf.c glib/gprintf.h glib/gprintfint.h
     glib/gnulib/printf.c glib/gnulib/printf.h
@@ -34,9 +35,10 @@ ADD_LIBRARY(glib_lite STATIC
     glib/gthread.c glib/gthread.h glib/gthread-posix.c
     glib/deprecated/gthread.h glib/deprecated/gthread-deprecated.c
 
-    glib/gstringchunk.c glib/gstringchunk.h
+    glib/gquark.c glib/gquark.h
+    glib/gerror.c glib/gerror.h
 
-    #glib/gstrfuncs.c glib/gstrfuncs.h
+
     #glib/goption.c glib/goption.h
     #glib/gkeyfile.c glib/gkeyfile.h
     #glib/gfileutils.c glib/gfileutils.h

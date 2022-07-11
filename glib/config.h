@@ -17,6 +17,7 @@
 #define TRACE(...)
 #define g_error(...)
 #define g_warning(...)
+#define g_warn_if_fail(...)
 #define g_return_if_fail(...)
 #define g_return_val_if_fail(...)
 #define g_assert(...)
