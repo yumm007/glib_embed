@@ -22,6 +22,7 @@
 #error "Only <glib.h> can be included directly."
 #endif
 
+#include "config.h"
 #include <glib/gtypes.h>
 
 G_BEGIN_DECLS

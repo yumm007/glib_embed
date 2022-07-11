@@ -21,6 +21,8 @@
 //#include <glib.h>
 #include <stdio.h>
 #include <stdarg.h>
+#include "gmacros.h"
+#include "gtypes.h"
 
 G_BEGIN_DECLS
 

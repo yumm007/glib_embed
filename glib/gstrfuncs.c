@@ -53,6 +53,7 @@
 #include "gprintf.h"
 #include "gprintfint.h"
 #include "gmem.h"
+#include "gslist.h"
 //#include "glibintl.h"
 
 
@@ -2896,6 +2897,7 @@ g_strv_length (gchar **str_array)
   return i;
 }
 
+#ifndef GLIB_LITE
 static void
 index_add_folded (GPtrArray   *array,
                   const gchar *start,
@@ -2944,6 +2946,7 @@ index_add_folded (GPtrArray   *array,
   g_ptr_array_add (array, g_utf8_casefold (normal, -1));
   g_free (normal);
 }
+
 
 static gchar **
 split_words (const gchar *value)
@@ -3009,6 +3012,7 @@ split_words (const gchar *value)
  *
  * Since: 2.40
  **/
+
 gchar **
 g_str_tokenize_and_fold (const gchar   *string,
                          const gchar   *translit_locale,
@@ -3066,6 +3070,7 @@ g_str_tokenize_and_fold (const gchar   *string,
 
   return result;
 }
+#endif
 
 /**
  * g_str_match_string:
@@ -3155,6 +3160,7 @@ one_matched:
  *
  * Since: 2.44
  */
+#ifndef GLIB_LITE
 gboolean
 g_strv_contains (const gchar * const *strv,
                  const gchar         *str)
@@ -3170,3 +3176,4 @@ g_strv_contains (const gchar * const *strv,
 
   return FALSE;
 }
+#endif

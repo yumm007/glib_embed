@@ -9,15 +9,18 @@ INCLUDE_DIRECTORIES(./
 ADD_LIBRARY(glib_lite STATIC
     glib/glibconfig.h glib/gtypes.h glib/gversionmacros.h
     glib/glist.c glib/glist.h
+    glib/gslist.c glib/gslist.h
     glib/gslice.c glib/gslice.h
     glib/gmem.c glib/gmem.h
     glib/gnode.c glib/gnode.h
     glib/gthread.c glib/gthread.h
     glib/gstrfuncs.c glib/gstrfuncs.h
-    glib/gslist.c glib/gslist.h
     glib/gatomic.c glib/gatomic.h
     glib/gprintf.c glib/gprintf.h glib/gprintfint.h
     glib/gnulib/printf.c glib/gnulib/printf.h
+    glib/gnulib/vasnprintf.c glib/gnulib/vasnprintf.h
+    glib/gnulib/printf-args.c glib/gnulib/printf-args.h
+    glib/gnulib/printf-parse.c glib/gnulib/printf-parse.h
 
     #glib/ghash.c glib/ghash.h
 
@@ -34,5 +37,5 @@ ADD_LIBRARY(glib_lite STATIC
 
 TARGET_COMPILE_DEFINITIONS(glib_lite PRIVATE __GLIB_H_INSIDE__)
 
-add_executable(glib_test test/test_main.c)
+add_executable(glib_test test/test_main.c test/list.c test/glist_test.c)
 target_link_libraries(glib_test glib_lite)

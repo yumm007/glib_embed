@@ -21,9 +21,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+
 #include "gprintf.h"
 #include "gprintfint.h"
+#include "gtypes.h"
 
+gint
+g_vsnprintf (gchar	 *string,
+             gulong	  n,
+             gchar const *format,
+             va_list      args);
 
 /**
  * g_printf:

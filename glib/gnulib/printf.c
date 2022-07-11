@@ -31,6 +31,7 @@
 #include "g-gnulib.h"
 #include "vasnprintf.h"
 #include "printf.h"
+#include "gmacros.h"
 
 int _g_gnulib_printf (char const *format, ...)
 {
