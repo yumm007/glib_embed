@@ -37,5 +37,5 @@ ADD_LIBRARY(glib_lite STATIC
 
 TARGET_COMPILE_DEFINITIONS(glib_lite PRIVATE __GLIB_H_INSIDE__)
 
-add_executable(glib_test test/test_main.c test/list.c test/glist_test.c)
+add_executable(glib_test test/test_main.c test/glist_test_from_glib.c test/glist_test.c)
 target_link_libraries(glib_test glib_lite)

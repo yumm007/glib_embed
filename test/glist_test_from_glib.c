@@ -1,9 +1,14 @@
 #include <glib.h>
 #include <stdlib.h>
+#include <assert.h>
 
 #define SIZE       50
 #define NUMBER_MIN 0000
 #define NUMBER_MAX 9999
+
+#undef g_assert
+#define g_assert assert
+#define g_assert_cmpint(x, ind, y) assert(x ind y)
 
 
 static guint32 array[SIZE];
@@ -40,7 +45,7 @@ test_list_sort(void) {
     g_list_free(list);
 }
 
-/*
+
 static void
 test_list_sort_with_data(void) {
     GList *list = NULL;
@@ -449,31 +454,8 @@ test_position(void) {
     g_list_free(ll);
 }
 
-static void
-test_double_free(void) {
-    GList *list, *link;
-    GList intruder = {NULL, (gpointer) 0xDEADBEEF, (gpointer) 0xDEADBEEF};
 
-    if (g_test_subprocess()) {
-        list = NULL;
-        list = g_list_append(list, "a");
-        link = list = g_list_append(list, "b");
-        list = g_list_append(list, "c");
 
-        list = g_list_remove_link(list, link);
-        link->prev = list;
-        link->next = &intruder;
-        list = g_list_remove_link(list, link);
-
-        g_list_free(list);
-        return;
-    }
-
-    g_test_trap_subprocess(NULL, 0, 0);
-    g_test_trap_assert_failed ();
-    g_test_trap_assert_stderr ("*corrupted double-linked list detected*");
-}
-*/
 
 int glist_test_main_bak(void) {
 
@@ -481,7 +463,7 @@ int glist_test_main_bak(void) {
 
     /* Create an array of random numbers. */
     g_test_add_func ("/list/sort", test_list_sort);
-    /*
+
     g_test_add_func ("/list/sort-with-data", test_list_sort_with_data);
     g_test_add_func ("/list/insert-sorted", test_list_insert_sorted);
     g_test_add_func ("/list/insert-sorted-with-data", test_list_insert_sorted_with_data);
@@ -498,7 +480,6 @@ int glist_test_main_bak(void) {
     g_test_add_func ("/list/delete-link", test_delete_link);
     g_test_add_func ("/list/prepend", test_prepend);
     g_test_add_func ("/list/position", test_position);
-    g_test_add_func ("/list/double-free", test_double_free);*/
 
     return 0;
 }

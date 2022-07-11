@@ -3,11 +3,12 @@
 //
 
 extern int glist_test_main(void);
-
+extern int glist_test_main_bak(void);
 
 int main(void) {
 
     glist_test_main();
+    glist_test_main_bak();
 
     return 0;
 }

@@ -38,6 +38,9 @@ static void glist_test_1(void) {
 
     l = g_list_append(l, "1");
     l = g_list_append(l, "2");
+    l = g_list_insert(l, "3", 1);
+
+    assert(g_list_index(l,"3") == 1);
 
     g_list_free(l);
 
