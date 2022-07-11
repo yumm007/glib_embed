@@ -8,9 +8,9 @@ INCLUDE_DIRECTORIES(./
 
 ADD_LIBRARY(glib_lite STATIC
     glib/glibconfig.h glib/gtypes.h glib/gversionmacros.h
+    glib/gslice.c glib/gslice.h
     glib/glist.c glib/glist.h
     glib/gslist.c glib/gslist.h
-    glib/gslice.c glib/gslice.h
     glib/gmem.c glib/gmem.h
     glib/gnode.c glib/gnode.h
     glib/gthread.c glib/gthread.h

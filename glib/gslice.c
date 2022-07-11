@@ -1163,6 +1163,7 @@ g_slice_free1 (gsize    mem_size,
  *
  * Since: 2.10
  */
+
 void
 g_slice_free_chain_with_offset (gsize    mem_size,
                                 gpointer mem_chain,

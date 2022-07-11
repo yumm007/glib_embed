@@ -179,7 +179,12 @@ g_list_alloc (void)
 void
 g_list_free (GList *list)
 {
-  g_slice_free_chain (GList, list, next);
+  //g_slice_free_chain(GList, list, next);
+  do {
+      GList *curr = list;
+      list = list->next;
+      _g_list_free1(curr);
+  } while (list != NULL);
 }
 
 /**

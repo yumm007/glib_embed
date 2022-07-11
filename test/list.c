@@ -475,9 +475,9 @@ test_double_free(void) {
 }
 */
 
-int glist_test_main(void) {
+int glist_test_main_bak(void) {
 
-#define g_test_add_func(desc, fun) fun()
+    #define g_test_add_func(desc, fun) fun()
 
     /* Create an array of random numbers. */
     g_test_add_func ("/list/sort", test_list_sort);

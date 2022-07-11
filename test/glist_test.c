@@ -43,7 +43,7 @@ static void glist_test_1(void) {
 
 }
 
-int glist_test_main_bak(void) {
+int glist_test_main(void) {
 
     glist_test_1();
     glist_test_2();
