@@ -490,7 +490,7 @@ double_hash_test (void)
   g_hash_table_destroy (h);
 }
 
-/*
+
 static void
 string_free (gpointer data)
 {
@@ -534,7 +534,7 @@ string_hash_test (void)
   g_string_free (s, TRUE);
   g_hash_table_destroy (h);
 }
-*/
+
 static void
 set_check (gpointer key,
            gpointer value,
@@ -1465,7 +1465,7 @@ void ghash_test_main (void) {
   g_test_add_func ("/hash/int", int_hash_test);
   g_test_add_func ("/hash/int64", int64_hash_test);
   g_test_add_func ("/hash/double", double_hash_test);
-  //g_test_add_func ("/hash/string", string_hash_test);
+  g_test_add_func ("/hash/string", string_hash_test);
   g_test_add_func ("/hash/set", set_hash_test);
   g_test_add_func ("/hash/set-ref", set_ref_hash_test);
   g_test_add_func ("/hash/ref", test_hash_ref);

@@ -23,9 +23,13 @@ ADD_LIBRARY(glib_lite STATIC
     glib/gnulib/printf-parse.c glib/gnulib/printf-parse.h
 
     glib/ghash.c glib/ghash.h
+    glib/gstring.c glib/gstring.h
+    glib/gbytes.c glib/gbytes.h
+    glib/garray.c glib/garray.h
+    glib/gqsort.c glib/gqsort.h
 
     #glib/gqueue.c glib/gqueue.h
-    #glib/gstring.c glib/gstring.h
+    #
     #glib/gstrfuncs.c glib/gstrfuncs.h
     #glib/gstringchunk.c glib/gstringchunk.h
 
@@ -42,5 +46,6 @@ add_executable(glib_test test/test_main.c
     test/glist_test.c
     test/glib_test.h
     test/hash.c
+    test/string.c
     )
 target_link_libraries(glib_test glib_lite)

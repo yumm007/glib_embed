@@ -46,6 +46,8 @@
  * If g_mem_gc_friendly is TRUE, freed memory should be 0-wiped.
  */
 
+gboolean g_mem_gc_friendly = FALSE;
+
 /* --- variables --- */
 static GMemVTable glib_mem_vtable = {
   malloc,

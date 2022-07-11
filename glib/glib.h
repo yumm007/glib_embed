@@ -79,7 +79,7 @@
 #include <glib/gslist.h>
 //#include <glib/gspawn.h>
 #include <glib/gstrfuncs.h>
-//#include <glib/gstring.h>
+#include <glib/gstring.h>
 //#include <glib/gstringchunk.h>
 //#include <glib/gtestutils.h>
 #include <glib/gthread.h>
