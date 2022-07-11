@@ -6,9 +6,9 @@
 #define NUMBER_MIN 0000
 #define NUMBER_MAX 9999
 
-#undef g_assert
-#define g_assert assert
-#define g_assert_cmpint(x, ind, y) assert(x ind y)
+
+
+#include "glib_test.h"
 
 
 static guint32 array[SIZE];
@@ -459,7 +459,7 @@ test_position(void) {
 
 int glist_test_main_bak(void) {
 
-    #define g_test_add_func(desc, fun) fun()
+
 
     /* Create an array of random numbers. */
     g_test_add_func ("/list/sort", test_list_sort);

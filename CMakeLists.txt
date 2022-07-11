@@ -22,7 +22,7 @@ ADD_LIBRARY(glib_lite STATIC
     glib/gnulib/printf-args.c glib/gnulib/printf-args.h
     glib/gnulib/printf-parse.c glib/gnulib/printf-parse.h
 
-    #glib/ghash.c glib/ghash.h
+    glib/ghash.c glib/ghash.h
 
     #glib/gqueue.c glib/gqueue.h
     #glib/gstring.c glib/gstring.h
@@ -37,5 +37,10 @@ ADD_LIBRARY(glib_lite STATIC
 
 TARGET_COMPILE_DEFINITIONS(glib_lite PRIVATE __GLIB_H_INSIDE__)
 
-add_executable(glib_test test/test_main.c test/glist_test_from_glib.c test/glist_test.c)
+add_executable(glib_test test/test_main.c
+    test/glist_test_from_glib.c
+    test/glist_test.c
+    test/glib_test.h
+    test/hash.c
+    )
 target_link_libraries(glib_test glib_lite)

@@ -20,5 +20,7 @@
 #define g_return_val_if_fail(...)
 #define g_assert(...)
 
+#define _g_alignof(type) (__alignof__ (type))
+
 
 #endif //GLIB_LITE_V2_CONFIG_H

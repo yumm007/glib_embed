@@ -3105,6 +3105,7 @@ g_str_tokenize_and_fold (const gchar   *string,
  *
  * Since: 2.40
  **/
+#ifndef GLIB_LITE
 gboolean
 g_str_match_string (const gchar *search_term,
                     const gchar *potential_hit,
@@ -3160,7 +3161,7 @@ one_matched:
  *
  * Since: 2.44
  */
-#ifndef GLIB_LITE
+
 gboolean
 g_strv_contains (const gchar * const *strv,
                  const gchar         *str)
