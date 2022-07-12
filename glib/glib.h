@@ -46,8 +46,8 @@
 //#include <glib/gdatetime.h>
 //#include <glib/gdir.h>
 //#include <glib/genviron.h>
-//#include <glib/gerror.h>
-//#include <glib/gfileutils.h>
+#include <glib/gerror.h>
+#include <glib/gfileutils.h>
 //#include <glib/ggettext.h>
 #include <glib/ghash.h>
 //#include <glib/ghmac.h>

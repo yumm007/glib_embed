@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 
 PROJECT(glib_lite)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-string-compare -Wno-int-conversion")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-int-conversion")
 
 
 INCLUDE_DIRECTORIES(./
@@ -41,10 +41,10 @@ ADD_LIBRARY(glib_embed STATIC
     glib/gquark.c glib/gquark.h
     glib/gerror.c glib/gerror.h
     glib/goption.c glib/goption.h
+    glib/gkeyfile.c glib/gkeyfile.h
+    glib/gfileutils.c glib/gfileutils.h
+    glib/gstdio.c glib/gstdio.h
 
-    #glib/goption.c glib/goption.h
-    #glib/gkeyfile.c glib/gkeyfile.h
-    #glib/gfileutils.c glib/gfileutils.h
     glib/config.h)
 
 add_executable(glib_test test/test_main.c

@@ -8,6 +8,9 @@
 #define g_test_add_func(desc, fun) fun()
 #undef g_assert
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wstring-compare"
+
 #include <assert.h>
 #define g_assert assert
 #define g_assert_cmpint(x, ind, y) assert(x ind y)
