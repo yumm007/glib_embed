@@ -9,7 +9,7 @@ INCLUDE_DIRECTORIES(./
     glib/
     )
 
-ADD_LIBRARY(glib_lite STATIC
+ADD_LIBRARY(glib_embed STATIC
     glib/glibconfig.h glib/gtypes.h glib/gversionmacros.h
     glib/gslice.c glib/gslice.h
     glib/glist.c glib/glist.h
@@ -56,4 +56,4 @@ add_executable(glib_test test/test_main.c
     test/asyncqueue.c
     test/option-context.c
     )
-target_link_libraries(glib_test glib_lite)
+target_link_libraries(glib_test glib_embed)
