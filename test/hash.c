@@ -1426,13 +1426,12 @@ test_set_to_strv (void)
   g_assert_cmpint (n, ==, 2);
   n = g_strv_length (strv);
   g_assert_cmpint (n, ==, 2);
-  if (g_str_equal (strv[0], "abc"))
-    g_assert_cmpstr (strv[1], ==, "xyz");
-  else
-    {
+  if (g_str_equal (strv[0], "abc")) {
+      g_assert_cmpstr (strv[1], ==, "xyz");
+  } else{
     g_assert_cmpstr (strv[0], ==, "xyz");
     g_assert_cmpstr (strv[1], ==, "abc");
-    }
+  }
   g_strfreev (strv);
 }
 

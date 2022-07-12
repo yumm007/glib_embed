@@ -25,6 +25,8 @@
 #ifndef __G_TYPES_H__
 #define __G_TYPES_H__
 
+#include "config.h"
+
 #if !defined (__GLIB_H_INSIDE__) && !defined (GLIB_COMPILATION)
 #error "Only <glib.h> can be included directly."
 #endif

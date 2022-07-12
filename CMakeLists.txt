@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.20)
 
 PROJECT(glib_lite)
 
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-string-compare -Wno-int-conversion")
+
+
 INCLUDE_DIRECTORIES(./
     glib/
     )
@@ -43,8 +46,6 @@ ADD_LIBRARY(glib_lite STATIC
     #glib/gkeyfile.c glib/gkeyfile.h
     #glib/gfileutils.c glib/gfileutils.h
     glib/config.h)
-
-TARGET_COMPILE_DEFINITIONS(glib_lite PRIVATE __GLIB_H_INSIDE__)
 
 add_executable(glib_test test/test_main.c
     test/glist_test_from_glib.c
