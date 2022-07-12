@@ -35,6 +35,8 @@ G_BEGIN_DECLS
 
 typedef guint32 GQuark;
 
+void g_quark_init (void);
+
 /* Quarks (string<->id association)
  */
 GLIB_AVAILABLE_IN_ALL

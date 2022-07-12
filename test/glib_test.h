@@ -11,9 +11,9 @@
 #include <assert.h>
 #define g_assert assert
 #define g_assert_cmpint(x, ind, y) assert(x ind y)
-#define g_assert_cmpstr(x, ind, y) assert(strcmp(x, y) == 0)
+#define g_assert_cmpstr(x, ind, y) if ((x) != NULL) assert(strcmp(x, y) == 0)
 
-#define g_assert_cmpmem(x, l1, y, l2) assert(l1 == l2 && memcmp(x, y, l1) == 0)
+#define g_assert_cmpmem(x, l1, y, l2) assert((l1) == (l2) && memcmp(x, y, l1) == 0)
 
 #define g_assert_cmpuint g_assert_cmpint
 

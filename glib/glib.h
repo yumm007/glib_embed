@@ -68,7 +68,7 @@
 //#include <glib/gpoll.h>
 //#include <glib/gprimes.h>
 #include <glib/gqsort.h>
-//#include <glib/gquark.h>
+#include <glib/gquark.h>
 #include <glib/gqueue.h>
 //#include <glib/grand.h>
 //#include <glib/gregex.h>

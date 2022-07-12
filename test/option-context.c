@@ -35,7 +35,6 @@
 #define g_test_undefined(x) 1
 #define g_assert_error(err, dom, c) assert(!(!err || (err)->domain != dom || (err)->code != c))
 
-
 static GOptionEntry main_entries[] = {
   { "main-switch", 0, 0,
     G_OPTION_ARG_NONE, NULL,
@@ -2064,6 +2063,7 @@ test_help (void)
   g_option_context_add_group (context, group);
 
   str = g_option_context_get_help (context, FALSE, NULL);
+
   g_assert (strstr (str, "blabla") != NULL);
   g_assert (strstr (str, "Test tests") != NULL);
   g_assert (strstr (str, "Argument to use in test") != NULL);
@@ -2520,6 +2520,7 @@ double_free (void)
 
 }
 
+
 void glib_option_test_main (void) {
   int i;
   gchar *test_name;
@@ -2529,7 +2530,7 @@ void glib_option_test_main (void) {
 //
 //  g_test_bug_base ("http://bugzilla.gnome.org/");
 
-  //g_test_add_func ("/option/help/options", test_help);
+  g_test_add_func ("/option/help/options", test_help);
   g_test_add_func ("/option/help/no-options", test_help_no_options);
   g_test_add_func ("/option/help/no-help-options", test_help_no_help_options);
 

@@ -195,7 +195,7 @@
 #include "glib.h"
 
 #define _(x) (x)
-#define g_dgettext(x, y) (x)
+#define g_dgettext(x, y) (y)
 #define g_locale_to_utf8(x, ...) g_strdup(x)
 
 //#include "glibintl.h"
