@@ -37,7 +37,7 @@ ADD_LIBRARY(glib_lite STATIC
 
     glib/gquark.c glib/gquark.h
     glib/gerror.c glib/gerror.h
-
+    glib/goption.c glib/goption.h
 
     #glib/goption.c glib/goption.h
     #glib/gkeyfile.c glib/gkeyfile.h
@@ -53,5 +53,6 @@ add_executable(glib_test test/test_main.c
     test/hash.c
     test/string.c
     test/asyncqueue.c
+    test/option-context.c
     )
 target_link_libraries(glib_test glib_lite)

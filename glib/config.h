@@ -23,6 +23,7 @@
 #define g_assert(...)
 #define g_abort() *(char *) 0 = 1
 #define _g_alignof(type) (__alignof__ (type))
+#define g_assert_not_reached(...) *(char *)1 = 1
 
 
 #endif //GLIB_LITE_V2_CONFIG_H

@@ -7,6 +7,7 @@ extern int glist_test_main_bak(void);
 extern void ghash_test_main (void);
 extern void glib_string_test(void);
 extern void asyncqueue_test_main (void);
+extern void glib_option_test_main (void);
 
 int main(void) {
 
@@ -16,5 +17,6 @@ int main(void) {
     glib_string_test();
     asyncqueue_test_main();
 
+    glib_option_test_main();
     return 0;
 }
