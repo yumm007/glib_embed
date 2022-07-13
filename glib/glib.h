@@ -45,7 +45,7 @@
 //#include <glib/gdate.h>
 //#include <glib/gdatetime.h>
 //#include <glib/gdir.h>
-//#include <glib/genviron.h>
+#include <glib/genviron.h>
 #include <glib/gerror.h>
 #include <glib/gfileutils.h>
 //#include <glib/ggettext.h>
@@ -54,7 +54,7 @@
 //#include <glib/ghook.h>
 //#include <glib/ghostutils.h>
 //#include <glib/giochannel.h>
-//#include <glib/gkeyfile.h>
+#include <glib/gkeyfile.h>
 #include <glib/glist.h>
 #include <glib/gmacros.h>
 //#include <glib/gmain.h>
@@ -89,9 +89,9 @@
 //#include <glib/gtrashstack.h>
 //#include <glib/gtree.h>
 #include <glib/gtypes.h>
-//#include <glib/gunicode.h>
+#include <glib/gunicode.h>
 //#include <glib/gurifuncs.h>
-//#include <glib/gutils.h>
+#include <glib/gutils.h>
 //#include <glib/guuid.h>
 //#include <glib/gvarianttype.h>
 //#include <glib/gvariant.h>

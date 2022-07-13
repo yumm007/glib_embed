@@ -30,9 +30,9 @@
 #endif
 
 #include <glib/gtypes.h>
-//#include <glib/gunicode.h>
+#include <glib/gunicode.h>
 #include <glib/gbytes.h>
-//#include <glib/gutils.h>  /* for G_CAN_INLINE */
+#include <glib/gutils.h>  /* for G_CAN_INLINE */
 
 typedef guint32 gunichar;
 

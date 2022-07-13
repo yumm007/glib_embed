@@ -60,6 +60,7 @@
 #include <sys/vfs.h>
 #endif
 
+#define g_dngettext(a,b,c,d) (c)
 
 /**
  * SECTION:fileutils

@@ -1,7 +1,7 @@
 ### embed glib
 1. porting from glib-2.52.3
-2. remove gettext, locale, utf-8 from glib
-3. support gslist, glist, gasyncqueue, ghashtable, goptions, gstring
+2. remove gettext, locale from glib
+3. support gslist, glist, gasyncqueue, ghashtable, goptions, gstring, gkeyfile
 4. enabled glib test for verify glib modules
 
 ### size

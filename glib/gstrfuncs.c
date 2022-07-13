@@ -54,6 +54,8 @@
 #include "gprintfint.h"
 #include "gmem.h"
 #include "gslist.h"
+#include "ghash.h"
+#include "gthread.h"
 //#include "glibintl.h"
 
 
@@ -1252,7 +1254,7 @@ g_ascii_strtoll (const gchar *nptr,
  * Returns: a UTF-8 string describing the error code. If the error code
  *     is unknown, it returns a string like "unknown error (<code>)".
  */
-#ifndef GLIB_LITE
+
 const gchar *
 g_strerror (gint errnum)
 {
@@ -1290,13 +1292,16 @@ g_strerror (gint errnum)
       g_strlcpy (buf, strerror (errnum), sizeof (buf));
       msg = buf;
 #endif
+#ifndef GLIB_LITE
       if (!g_get_charset (NULL))
         {
           msg = g_locale_to_utf8 (msg, -1, NULL, NULL, &error);
           if (error)
             g_print ("%s\n", error->message);
         }
-      else if (msg == (const gchar *)buf)
+      else
+#endif
+          if (msg == (const gchar *)buf)
         msg = g_strdup (buf);
 
       g_hash_table_insert (errors, GINT_TO_POINTER (errnum), (char *) msg);
@@ -1306,7 +1311,7 @@ g_strerror (gint errnum)
   errno = saved_errno;
   return msg;
 }
-#endif
+
 
 /**
  * g_strsignal:

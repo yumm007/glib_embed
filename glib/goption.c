@@ -325,52 +325,7 @@ _g_utf8_strwidth (const gchar *p)
   return len;
 }
 #else
-G_LOCK_DEFINE_STATIC (g_prgname);
-static gchar *g_prgname = NULL;
 
-const gchar*
-g_get_prgname (void)
-{
-    gchar* retval;
-
-    G_LOCK (g_prgname);
-#ifdef G_OS_WIN32
-    if (g_prgname == NULL)
-    {
-      static gboolean beenhere = FALSE;
-
-      if (!beenhere)
-	{
-	  gchar *utf8_buf = NULL;
-	  wchar_t buf[MAX_PATH+1];
-
-	  beenhere = TRUE;
-	  if (GetModuleFileNameW (GetModuleHandle (NULL),
-				  buf, G_N_ELEMENTS (buf)) > 0)
-	    utf8_buf = g_utf16_to_utf8 (buf, -1, NULL, NULL, NULL);
-
-	  if (utf8_buf)
-	    {
-	      g_prgname = g_path_get_basename (utf8_buf);
-	      g_free (utf8_buf);
-	    }
-	}
-    }
-#endif
-    retval = g_prgname;
-    G_UNLOCK (g_prgname);
-
-    return retval;
-}
-
-void
-g_set_prgname (const gchar *prgname)
-{
-    G_LOCK (g_prgname);
-    g_free (g_prgname);
-    g_prgname = g_strdup (prgname);
-    G_UNLOCK (g_prgname);
-}
 
 static glong
 _g_utf8_strwidth (const gchar *p) {

@@ -2082,6 +2082,7 @@ g_key_file_set_string_list (GKeyFile            *key_file,
   g_string_free (value_list, TRUE);
 }
 
+#ifndef GLIB_LITE
 /**
  * g_key_file_set_locale_string:
  * @key_file: a #GKeyFile
@@ -2327,6 +2328,7 @@ g_key_file_set_locale_string_list (GKeyFile            *key_file,
   g_free (full_key);
   g_string_free (value_list, TRUE);
 }
+#endif
 
 /**
  * g_key_file_get_boolean:

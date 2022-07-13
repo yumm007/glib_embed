@@ -10,6 +10,7 @@ extern void ghash_test_main (void);
 extern void glib_string_test(void);
 extern void asyncqueue_test_main (void);
 extern void glib_option_test_main (void);
+extern void glib_keyfile_test_main(void);
 
 int main(void) {
 
@@ -22,5 +23,7 @@ int main(void) {
     asyncqueue_test_main();
 
     glib_option_test_main();
+    glib_keyfile_test_main();
+
     return 0;
 }

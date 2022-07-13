@@ -23,7 +23,6 @@
 #define g_return_if_fail(...)
 #define g_return_val_if_fail(...)
 #define g_assert(...)
-#define g_abort() *(volatile char *) 0 = 1
 #define _g_alignof(type) (__alignof__ (type))
 #define g_assert_not_reached(...) *(volatile char *)1 = 1
 

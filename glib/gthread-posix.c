@@ -46,7 +46,7 @@
 //#include "gmessages.h"
 #include "gstrfuncs.h"
 //#include "gmain.h"
-//#include "gutils.h"
+#include "gutils.h"
 #include "gtimer.h"
 
 #include <stdlib.h>

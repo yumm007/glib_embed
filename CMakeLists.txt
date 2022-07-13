@@ -44,6 +44,13 @@ ADD_LIBRARY(glib_embed STATIC
     glib/gkeyfile.c glib/gkeyfile.h
     glib/gfileutils.c glib/gfileutils.h
     glib/gstdio.c glib/gstdio.h
+    glib/gutf8.c glib/gunicode.h
+    glib/gutils.c glib/gutils.h
+    glib/genviron.c glib/genviron.h
+    glib/gunichartables.h glib/gmirroringtable.h
+    glib/gscripttable.h glib/gunicodeprivate.h
+    glib/guniprop.c glib/gunicomp.h
+    glib/gunidecomp.c glib/gunidecomp.h
 
     glib/config.h)
 
@@ -55,5 +62,7 @@ add_executable(glib_test test/test_main.c
     test/string.c
     test/asyncqueue.c
     test/option-context.c
+    test/keyfile.c
     )
+
 target_link_libraries(glib_test glib_embed)

@@ -883,9 +883,11 @@ g_close (gint       fd,
   else if (res == -1)
     {
       int errsv = errno;
+      /*
       g_set_error_literal (error, G_FILE_ERROR,
                            g_file_error_from_errno (errsv),
                            g_strerror (errsv));
+                           */
       errno = errsv;
       return FALSE;
     }

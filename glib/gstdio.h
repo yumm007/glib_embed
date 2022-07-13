@@ -20,6 +20,7 @@
 #define __G_STDIO_H__
 
 #include <glib/gprintf.h>
+#include "glib/gerror.h"
 
 #include <sys/stat.h>
 

@@ -30,10 +30,9 @@
 #include "glib_test.h"
 //#include "glib-2.52.3/glib/gtestutils.h"
 
-#define g_assert_no_error(e) assert(e == NULL)
-#define g_assert_null(x) assert (x == NULL)
+
 #define g_test_undefined(x) 1
-#define g_assert_error(err, dom, c) assert(!(!err || (err)->domain != dom || (err)->code != c))
+
 
 static GOptionEntry main_entries[] = {
   { "main-switch", 0, 0,
